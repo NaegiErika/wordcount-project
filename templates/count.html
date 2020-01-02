@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+    <h1>Count!</h1>
+    <h2>there are {{ count }} words</h2>
+
+    <a href="{% url 'home' %}">Start again</a>
+
+    <h2>fulltext:</h2>
+    {{ fulltext }}
+
+    {% for word, counttotal in worddict %}
+    <br/>
+    {{ word }} - {{ counttotal }}
+
+    {% endfor %}
+  </body>
+</html>
